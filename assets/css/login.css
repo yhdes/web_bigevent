@@ -1,0 +1,54 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: url('/03-大事件项目课程资料（第三章大事件后台管理系统项目）/03-大事件项目课程资料（第三章大事件后台管理系统项目）/day1（1-3小节）/code-yh/assets/images/login_bg.jpg') no-repeat center;
+  /* background: url('/assets/images/login_bg.jpg') no-repeat center; */
+  background-size: cover;
+}
+.loginAndRegBox{
+width: 400px;
+height: 300px;
+background-color: #fff;
+/* 设置绝对定位，使元素相对于最近的已定位祖先元素进行定位 */
+position: absolute;
+/* 左上角相对父元素居中显示 */
+left: 50%;
+top: 50%;
+/* 使用transform属性将登录注册框的位置向左和向上各偏移50%，使其居中显示 */
+transform: translate(-50%,-50%);
+}
+.title-box{
+  height: 60px;
+  background: url('/03-大事件项目课程资料（第三章大事件后台管理系统项目）/03-大事件项目课程资料（第三章大事件后台管理系统项目）/day1（1-3小节）/code-yh/assets/images/login_title.png')
+  no-repeat center;
+}
+.reg-box{
+  display: none;
+}
+.layui-form{
+  padding: 0 30px;
+}
+.links{
+  /* float: right;  */
+  /* 使用 flex 布局，并将内容在容器的末尾对齐 */
+  display: flex;
+  justify-content: flex-end;
+}
+.links a{
+  font-size: 12px;
+}
+.layui-form-item{
+  position:relative;
+}
+.layui-icon{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.layui-input{
+  padding-left: 32px;
+}
+
