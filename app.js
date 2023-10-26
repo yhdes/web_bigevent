@@ -2,6 +2,7 @@
 const express = require('express')
 // 创建 express 的服务器实例
 const app = express()
+const joi = require('joi')
 
 // 配置cors跨域
 // 导入 cors 中间件
@@ -45,10 +46,13 @@ const userinfoRouter = require('./router/userinfo')
 // 注意：以 /my 开头的接口，都是有权限的接口，需要进行 Token 身份认证
 app.use('/my', userinfoRouter)
 
-
+// 导入并使用文章分类路由模块
+const artCateRouter = require('./router/artcate')
+// 为文章分类的路由挂载统一的访问前缀 /my/article
+app.use('/my/article', artCateRouter)
 
 // 在 `app.js` 的全局错误级别中间件中，捕获验证失败的错误，并把验证失败的结果响应给客户端
-const joi = require('joi')
+
 // 错误中间件
 app.use(function (err, req, res, next) {
   // 数据验证失败
