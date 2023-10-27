@@ -17,7 +17,6 @@ const sql = 'select * from ev_article_cate where is_delete=0 order by id asc'
         })
       })
   }
-
  // 增加文章分类列表数据的处理函数
 exports.addArticleCates = (req, res) => {
 // 定义查询 分类名称 与 分类别名 是否被占用的 SQL 语句
