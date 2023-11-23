@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background: url('/03-大事件项目课程资料（第三章大事件后台管理系统项目）/03-大事件项目课程资料（第三章大事件后台管理系统项目）/day1（1-3小节）/code-yh/assets/images/login_bg.jpg') no-repeat center;
+  background: url('../../assets/images/login_bg.jpg') no-repeat center;
   /* background: url('/assets/images/login_bg.jpg') no-repeat center; */
   background-size: cover;
 }
@@ -22,7 +22,7 @@ transform: translate(-50%,-50%);
 }
 .title-box{
   height: 60px;
-  background: url('/03-大事件项目课程资料（第三章大事件后台管理系统项目）/03-大事件项目课程资料（第三章大事件后台管理系统项目）/day1（1-3小节）/code-yh/assets/images/login_title.png')
+  background: url('../../assets/images/login_title.png')
   no-repeat center;
 }
 .reg-box{
