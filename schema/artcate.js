@@ -17,6 +17,7 @@ exports.add_cate_schema = {
   },
 }
 
+
 // 校验规则对象 - 删除分类
 exports.delete_cate_schema = {
   params: {
@@ -32,6 +33,7 @@ exports.get_cate_schema = {
   },
 }
 
+
 // 校验规则对象 - 更新分类
 exports.update_cate_schema = {
   body: {
@@ -40,3 +42,6 @@ exports.update_cate_schema = {
     alias,
   },
 }
+
+
+

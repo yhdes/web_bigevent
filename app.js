@@ -9,7 +9,6 @@ const joi = require('joi')
 const cors = require('cors')
 // 将 cors 注册为全局中间件
 app.use(cors())
-
 //通过如下的代码，配置解析 `application/x-www-form-urlencoded` 格式的表单数据的中间件
 app.use(express.urlencoded({ extended: false }))
 
@@ -68,12 +67,11 @@ app.use(function (err, req, res, next) {
   // 未知错误
   res.cc(err)
 })
-
-
 // 调用 app.listen 方法，指定端口号并启动web服务器
 app.listen(3007, function () {
   console.log('api server running at http://127.0.0.1:3007')
 })
+
 
 
 

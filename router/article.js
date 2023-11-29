@@ -20,12 +20,15 @@ const upload = multer({ dest: path.join(__dirname, '../uploads') })
 // 导入验证数据的中间件
 const expressJoi = require('@escook/express-joi')
 // 导入文章的验证模块
-const { add_article_schema } = require('../schema/article')
+const { add_article_schema, update_article_schema } = require('../schema/article')
+const { get_article_schema } = require('../schema/article')
+const { delete_article_schema } = require('../schema/article')
+const { get_articlebyid_schema } = require('../schema/article')
 // 发布新文章
 // router.post('/add', article_handler.addArticle)
 //发布新文章的路由
 // upload.single() 是一个局部生效的中间件，用来解析 FormData 格式的表单数据
-// 将文件类型的数据，解析并挂载到 req.file 属性中
+// 将文件类型的数ge t并挂载到 req.file 属性中
 // 将文本类型的数据，解析并挂载到 req.body 属性中
 //发布新文章的路由
 // 注意：在当前的路由中，先后使用了两个中间件：
@@ -33,6 +36,16 @@ const { add_article_schema } = require('../schema/article')
 //       再使用 expressJoi 对解析的表单数据进行验证
 // router.post('/add', upload.single('cover_img'), expressJoi(add_article_schema), article_handler.addArticle)
 router.post('/add', upload.single('cover_img'), expressJoi(add_article_schema), article_handler.addArticle)
+
+// 获取文章的列表数据的路由
+// router.get('/list',  article_handler.getArticle)
+router.get('/list/:pagesize/:pagenum',expressJoi(get_article_schema), article_handler.getArticle)
+
+//删除文章分类的路由
+router.get('/delete/:id',expressJoi(delete_article_schema), article_handler.deleteArticleById)
+router.get('/:id',expressJoi(get_articlebyid_schema), article_handler.getArticleById)
+router.post('/edit',upload.single('cover_img'),expressJoi(update_article_schema), article_handler.updateArticle)
+
 module.exports = router
 
 
